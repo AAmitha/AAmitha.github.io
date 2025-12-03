@@ -542,7 +542,31 @@ const staggerObserver = new IntersectionObserver((entries) => {
 
 // Apply stagger animation to skill tags
 document.addEventListener('DOMContentLoaded', () => {
-    fetchGitHubRepos();
+    // Load resume data and render sections. If resume data is not available, fall back to built-in content.
+    loadResumeData().then(data => {
+        if (!data) return;
+        renderHero(data);
+        renderAbout(data);
+        renderStats(data);
+        renderContact(data);
+        renderSkills(data);
+        renderExperience(data);
+        renderEducation(data);
+        renderCertifications(data);
+        renderHonors(data);
+        renderProjects(data);
+    }).catch(err => {
+        console.error('Error loading resume data:', err);
+        // If resume loading fails, still show fallback projects
+        const projectsGrid = document.getElementById('projectsGrid');
+        if (projectsGrid) {
+            projectsGrid.innerHTML = '';
+            fallbackProjects.forEach(repo => {
+                const projectCard = createProjectCard(repo);
+                projectsGrid.appendChild(projectCard);
+            });
+        }
+    });
     
     // Animate skill tags with stagger
     const skillTags = document.querySelectorAll('.skill-tag');
@@ -647,6 +671,207 @@ if ('IntersectionObserver' in window) {
         imageObserver.observe(img);
     });
 }
+
+// ------------------ Resume data loader & renderers ------------------
+async function loadResumeData() {
+    try {
+        const resp = await fetch('data/resume.json');
+        if (!resp.ok) throw new Error('Resume JSON not found');
+        return await resp.json();
+    } catch (err) {
+        console.warn('Could not load resume.json:', err);
+        return null;
+    }
+}
+
+function safeText(text) {
+    return text ? text : '';
+}
+
+function renderHero(data) {
+    const nameEl = document.querySelector('.name');
+    const titleEl = document.querySelector('.title');
+    const descEl = document.querySelector('.hero-description');
+    if (nameEl) nameEl.textContent = safeText(data.name);
+    if (titleEl) titleEl.textContent = safeText(data.title);
+    if (descEl && Array.isArray(data.summary)) descEl.textContent = data.summary[0] || '';
+}
+
+function renderAbout(data) {
+    const aboutText = document.querySelector('.about-text');
+    if (!aboutText) return;
+    aboutText.innerHTML = '';
+    if (Array.isArray(data.summary)) {
+        data.summary.forEach(par => {
+            const p = document.createElement('p');
+            p.textContent = par;
+            aboutText.appendChild(p);
+        });
+    }
+}
+
+function renderStats(data) {
+    try {
+        document.querySelectorAll('.stat-number').forEach(el => {
+            const key = el.getAttribute('data-target');
+            // Keep existing handling by setting data-target appropriately
+            if (key && data.stats) {
+                // Map known keys: years (4), accuracy (96), efficiency (40)
+                if (parseInt(key) === 4) el.setAttribute('data-target', data.stats.years_experience);
+                if (parseInt(key) === 96) el.setAttribute('data-target', data.stats.model_accuracy);
+                if (parseInt(key) === 40) el.setAttribute('data-target', data.stats.efficiency_improvement);
+            }
+        });
+    } catch (e) { }
+}
+
+function renderContact(data) {
+    const contactInfo = document.querySelector('.contact-info');
+    if (!contactInfo || !data.contact) return;
+    contactInfo.innerHTML = '';
+    // Email
+    const emailBlock = createContactItem('Email', `mailto:${data.contact.email}`, data.contact.email, 'M');
+    contactInfo.appendChild(emailBlock);
+    // Phone
+    const phoneBlock = createContactItem('Phone', `tel:${data.contact.phone.replace(/[^0-9+]/g, '')}`, data.contact.phone, 'P');
+    contactInfo.appendChild(phoneBlock);
+    // Location
+    const loc = document.createElement('div'); loc.className = 'contact-item';
+    loc.innerHTML = `
+        <div class="contact-icon"><svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z"/></svg></div>
+        <div><h3>Location</h3><p>${safeText(data.contact.location)}</p></div>
+    `;
+    contactInfo.appendChild(loc);
+    // Optional profile links
+    if (data.contact.kaggle) contactInfo.appendChild(createContactItem('Kaggle', data.contact.kaggle, data.contact.kaggle, 'K'));
+    if (data.contact.hackerrank) contactInfo.appendChild(createContactItem('HackerRank', data.contact.hackerrank, data.contact.hackerrank, 'H'));
+    if (data.contact.leetcode) contactInfo.appendChild(createContactItem('LeetCode', data.contact.leetcode, data.contact.leetcode, 'L'));
+}
+
+function createContactItem(title, href, text, short) {
+    const wrap = document.createElement('div');
+    wrap.className = 'contact-item';
+    wrap.innerHTML = `
+        <div class="contact-icon">${short ? `<span style="font-weight:700">${short}</span>` : ''}</div>
+        <div><h3>${title}</h3><a href="${href}" target="_blank" rel="noopener noreferrer">${text}</a></div>
+    `;
+    return wrap;
+}
+
+function renderSkills(data) {
+    const grid = document.querySelector('.skills-grid');
+    if (!grid || !data.skills) return;
+    grid.innerHTML = '';
+    Object.keys(data.skills).forEach(cat => {
+        const col = document.createElement('div');
+        col.className = 'skill-category';
+        col.innerHTML = `
+            <h3 class="skill-category-title">${cat}</h3>
+            <div class="skill-tags">${data.skills[cat].map(s => `<span class="skill-tag">${s}</span>`).join('')}</div>
+        `;
+        grid.appendChild(col);
+    });
+}
+
+function renderExperience(data) {
+    const timeline = document.querySelector('.experience-timeline');
+    if (!timeline || !data.experience) return;
+    timeline.innerHTML = '';
+    data.experience.forEach(item => {
+        const div = document.createElement('div');
+        div.className = 'experience-item';
+        div.innerHTML = `
+            <div class="experience-header">
+                <div class="experience-title-wrapper">
+                    <h3 class="experience-title">${item.role}</h3>
+                    <span class="experience-company">${item.company}</span>
+                </div>
+                <span class="experience-date">${item.date}</span>
+            </div>
+            <ul class="experience-details">
+                ${item.details.map(d => `<li>${d}</li>`).join('')}
+            </ul>
+            <div class="experience-tech">
+                ${item.tech.map(t => `<span>${t}</span>`).join('')}
+            </div>
+        `;
+        timeline.appendChild(div);
+    });
+}
+
+function renderEducation(data) {
+    const timeline = document.querySelector('.education-timeline');
+    if (!timeline || !data.education) return;
+    timeline.innerHTML = '';
+    data.education.forEach(item => {
+        const div = document.createElement('div');
+        div.className = 'education-item';
+        div.innerHTML = `
+            <div class="education-header">
+                <div class="education-title-wrapper">
+                    <h3 class="education-degree">${item.degree}</h3>
+                    <span class="education-school">${item.school}</span>
+                </div>
+                <span class="education-date">${item.date}</span>
+            </div>
+            <div class="education-details">
+                <p class="education-relevant">Relevant Coursework:</p>
+                <ul class="coursework-list">
+                    ${item.coursework.map(c => `<li>${c}</li>`).join('')}
+                </ul>
+            </div>
+        `;
+        timeline.appendChild(div);
+    });
+}
+
+function renderCertifications(data) {
+    const grid = document.querySelector('.certifications-grid');
+    if (!grid || !data.certifications) return;
+    grid.innerHTML = '';
+    data.certifications.forEach(cert => {
+        const card = document.createElement('div');
+        card.className = 'certification-card';
+        card.innerHTML = `
+            <div class="cert-icon"><svg width="32" height="32" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2L2 7v10c0 5.55 3.84 10.74 9 12 5.16-1.26 9-6.45 9-12V7l-10-5zm0 2.18l6 3v8.18c0 4.24-2.98 8.1-6 9.18-3.02-1.08-6-4.94-6-9.18V7.18l6-3z"/><path d="M9 12l2 2 4-4"/></svg></div>
+            <h3 class="cert-title">${cert}</h3>
+            <a class="cert-link" href="#" onclick="return false">View Certificate</a>
+        `;
+        grid.appendChild(card);
+    });
+}
+
+function renderHonors(data) {
+    const grid = document.querySelector('.honors-grid');
+    if (!grid || !data.honors) return;
+    grid.innerHTML = '';
+    data.honors.forEach(h => {
+        const card = document.createElement('div');
+        card.className = 'honor-card';
+        card.innerHTML = `
+            <div class="honor-icon"><svg width="32" height="32" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2L2 7v10c0 5.55 3.84 10.74 9 12 5.16-1.26 9-6.45 9-12V7l-10-5zm0 2.18l6 3v8.18c0 4.24-2.98 8.1-6 9.18-3.02-1.08-6-4.94-6-9.18V7.18l6-3z"/><path d="M12 8l-4 4h3v4h2v-4h3l-4-4z"/></svg></div>
+            <h3 class="honor-title">${h.title}</h3>
+            ${h.organization ? `<p class="honor-organization">${h.organization}</p>` : ''}
+            ${h.achievement ? `<p class="honor-achievement">${h.achievement}</p>` : ''}
+            ${h.description ? `<p class="honor-description">${h.description}</p>` : ''}
+            ${h.details ? `<ul class="honor-details">${h.details.map(d => `<li>${d}</li>`).join('')}</ul>` : ''}
+        `;
+        grid.appendChild(card);
+    });
+}
+
+function renderProjects(data) {
+    const projectsGrid = document.getElementById('projectsGrid');
+    if (!projectsGrid) return;
+    projectsGrid.innerHTML = '';
+    const list = (Array.isArray(data.projects) && data.projects.length>0) ? data.projects : fallbackProjects;
+    list.forEach(repo => {
+        const projectCard = createProjectCard(repo);
+        projectsGrid.appendChild(projectCard);
+    });
+}
+
+// ------------------ End resume renderers ------------------
 
 // Performance: Debounce scroll events
 function debounce(func, wait) {

@@ -1,0 +1,125 @@
+{
+  "name": "Amitha A",
+  "title": "Senior Data Scientist",
+  "summary": [
+    "Highly driven Data Scientist and AI/ML Engineer with 6+ years of experience delivering end-to-end analytics, machine learning, and GenAI solutions across supply chain, healthcare, and BFSI domains.",
+    "Skilled in designing scalable data pipelines, developing production-grade ML systems, and building advanced Agentic AI and RAG architectures using LangChain and LangGraph.",
+    "Adept at transforming business requirements into automated, data-powered solutions using Python, SQL, PySpark, Databricks, and cloud technologies across AWS, Azure, and GCP. Recognized for improving operational efficiency, driving measurable business impact, and leading cross-functional teams to accelerate AI adoption."
+  ],
+  "stats": {
+    "years_experience": 6,
+    "prediction_improvement_pct": 18,
+    "processing_time_reduction_pct": 83
+  },
+  "contact": {
+    "email": "amitha8841@gmail.com",
+    "phone": "(469) 581-9587",
+    "location": "Dallas, TX",
+    "kaggle": "https://www.kaggle.com/akepati",
+    "hackerrank": "https://www.hackerrank.com/profile/amithaake29",
+    "leetcode": "https://leetcode.com/u/aa29/"
+  },
+  "experience": [
+    {
+      "role": "Senior Data Scientist",
+      "company": "Americold Logistics, Dallas, TX",
+      "date": "Aug 2024 - Present",
+      "details": [
+        "Designed and deployed ML models for demand forecasting, inventory optimization, and cold-storage anomaly detection, improving prediction accuracy by 18% and reducing spoilage events.",
+        "Built scalable RAG pipelines using enterprise documents, embedding models, and vector databases to support operational decision-making.",
+        "Developed GenAI solutions using LangChain, Azure OpenAI, and LangGraph, including summarization, agent workflows, and warehouse Q&A systems.",
+        "Engineered automated ETL frameworks in Databricks + PySpark, reducing data processing times from 4 hours to under 40 minutes.",
+        "Created real-time Power BI dashboards for inventory KPIs, warehouse performance, SLA adherence, and temperature variance alerts.",
+        "Implemented feature stores and model registries using MLflow, improving consistency and auditability of production model updates.",
+        "Built and containerized APIs for ML serving using FastAPI, Docker, and Kubernetes, ensuring low-latency inference.",
+        "Implemented data quality validation using Great Expectations, ensuring 98% accuracy and preventing downstream model failures."
+      ],
+      "tech": ["Python","Databricks","PySpark","LangChain","LangGraph","Azure","Power BI","MLflow","FastAPI","Docker","Kubernetes"]
+    },
+    {
+      "role": "Data Analyst",
+      "company": "Tomorrow's Leaders Today, Frisco, TX",
+      "date": "Jan 2024 - May 2024",
+      "details": [
+        "Delivered advanced analytical insights for healthcare operations, improving reporting turnaround and insight clarity by 30%.",
+        "Created interactive Power BI dashboards integrating clinical workflows, appointment data, and compliance metrics.",
+        "Built secure SQL ETL pipelines to consolidate EHR, scheduling, billing, and claims data into unified analytical datasets.",
+        "Automated reporting workflows using Python + Power Automate, reducing manual effort by 40%.",
+        "Ensured strict HIPAA compliance in all analytics workflows by securing PHI data and access controls."
+      ],
+      "tech": ["Python","SQL","Power BI","DAX","ETL"]
+    },
+    {
+      "role": "Software Engineer",
+      "company": "DXC Technology, Bangalore, IN",
+      "date": "Jul 2019 - Dec 2022",
+      "details": [
+        "Developed ML models for customer churn prediction, fraud detection, and segmentation using Python and Scikit-learn.",
+        "Built enterprise-scale ETL pipelines using PySpark, Hive, and Hadoop, supporting high-volume data processing.",
+        "Designed Tableau and Power BI dashboards tracking customer KPIs, operational metrics, and risk indicators.",
+        "Monitored model performance using MLflow and built drift detection mechanisms to maintain model stability.",
+        "Wrote optimized SQL queries across Teradata, Oracle, and SQL Server, improving analytics execution time by 60%."
+      ],
+      "tech": ["Python","PySpark","Hive","Tableau","Power BI","MLflow","SQL"]
+    }
+    {
+      "role": "Software Developer",
+      "company": "DXC Technology",
+      "date": "June 2021 - August 2022",
+      "details": [
+        "Worked on Hewlett Packard Service Bus (HPSB), a middleware tool for file transfers between systems",
+        "Built Python scripts to monitor and automate file transfers, improving system reliability",
+        "Designed data validation and transformation workflows to clean and standardize files",
+        "Developed SQL queries and Power BI dashboards to track key metrics and error trends",
+        "Automated error detection and alert notifications using Python and AWS",
+        "Integrated Databricks for scalable data processing and analysis"
+      ],
+      "tech": ["Python","AWS","SQL","Power BI","Databricks","ETL"]
+    }
+  ],
+  "education": [
+    {
+      "degree": "Master of Science in Data Science",
+      "school": "University of Texas at Arlington",
+      "date": "Jan 2023 - May 2024",
+      "coursework": ["Machine Learning","Neural Networks","Deep Learning","Probability","Statistics","Data Visualization","Artificial Intelligence"]
+    },
+    {
+      "degree": "Bachelor of Technology in Computer Science and Engineering",
+      "school": "Annamacharya University",
+      "date": "Jun 2016 - Jul 2019",
+      "coursework": ["Python","DBMS","Big Data","Cloud Computing","Machine Learning","Data Structures and Algorithms"]
+    }
+  ],
+  "skills": {
+    "Programming & Scripting": ["Python","SQL","PySpark","HTML"],
+    "Machine Learning & AI": ["Supervised & Unsupervised Learning","Deep Learning (CNN, RNN, LSTM, Transformers)","Reinforcement Learning","NLP","Computer Vision","Generative AI","Agentic AI","RAG","Prompt Engineering","LLM Fine-Tuning (LoRA, QLoRA)"],
+    "Frameworks & Libraries": ["PyTorch","TensorFlow","Keras","Scikit-Learn","XGBoost","Hugging Face","LangChain","LlamaIndex","LangGraph","CrewAI","Pandas","NumPy","Matplotlib","Seaborn","OpenCV","NLTK"],
+    "Data Engineering & Cloud": ["ETL/ELT","Databricks","AWS (S3, EC2, Glue)","Azure (ADF, Synapse)","GCP (BigQuery, Vertex AI)","Vector DBs (FAISS, Chroma, Pinecone)"],
+    "BI & Visualization": ["Power BI","Tableau","Looker","Excel"],
+    "Tools & Methodologies": ["Git","GitHub","FastAPI","Docker","Kubernetes","MLflow","Jira","Agile/Scrum"]
+  },
+  "certifications": [
+    "Microsoft Certified: Azure Fundamentals (AZ-900)",
+    "Complete Guide to Databricks for Data Engineering",
+    "Alteryx Designer Core Certification",
+    "Power BI by PwC",
+    "Python for Data Science by IBM",
+    "HackerRank Problem Solving Certificate",
+    "HackerRank Python Certificate",
+    "Sales Data Exploration Certificate - HiCounselor"
+  ],
+  "honors": [
+    {
+      "title": "Data Analyst",
+      "organization": "Bright Mind Enrichment and Schooling, Irving",
+      "details": ["Developed predictive models to optimize donor targeting, increasing fundraising success by 30%","Built Power BI dashboards for funding analysis","Automated reporting with Python and SQL, reducing manual effort by 40%","Presented insights to leadership and stakeholders"]
+    },
+    {
+      "title": "IBM Hackathon",
+      "achievement": "3rd Rank out of 170 Participants",
+      "description": "Achieved 3rd rank out of 170 participants for innovative problem-solving."
+    }
+  ],
+  "projects": []
+}

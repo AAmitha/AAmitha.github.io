@@ -1,3 +1,15 @@
+Image assets and instructions
+
+- Place a profile photo at `assets/profile.jpg` (recommended 400x400 px, optimized JPEG or WebP).
+- Add project screenshots under `assets/projects/` named e.g. `project1.png`, `project2.png`.
+- The site will automatically use images if you add `img` tags in the project cards or update `data/resume.json` with project image URLs.
+
+To optimize images locally on Windows (PowerShell + ImageMagick installed):
+
+```powershell
+# resize and compress
+magick convert input.jpg -resize 800x800 -quality 85 output.jpg
+```
 # Image Setup Instructions
 
 ## Profile Image
