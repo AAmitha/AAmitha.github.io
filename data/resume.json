@@ -66,20 +66,6 @@
       "tech": ["Python","SQL","PySpark","Power BI"]
     }
   ],
-      "role": "Software Developer",
-      "company": "DXC Technology",
-      "date": "June 2021 - August 2022",
-      "details": [
-        "Worked on Hewlett Packard Service Bus (HPSB), a middleware tool for file transfers between systems",
-        "Built Python scripts to monitor and automate file transfers, improving system reliability",
-        "Designed data validation and transformation workflows to clean and standardize files",
-        "Developed SQL queries and Power BI dashboards to track key metrics and error trends",
-        "Automated error detection and alert notifications using Python and AWS",
-        "Integrated Databricks for scalable data processing and analysis"
-      ],
-      "tech": ["Python","AWS","SQL","Power BI","Databricks","ETL"]
-    }
-  ],
   "education": [
     {
       "degree": "Master of Science in Data Science",
