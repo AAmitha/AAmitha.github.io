@@ -1,68 +1,71 @@
 {
-  "name": "Amitha A",
-  "title": "Senior Data Scientist",
+  "name": "Amitha Akepati",
+  "title": "Data Scientist",
   "summary": [
-    "Highly driven Data Scientist and AI/ML Engineer with 6+ years of experience delivering end-to-end analytics, machine learning, and GenAI solutions across supply chain, healthcare, and BFSI domains.",
-    "Skilled in designing scalable data pipelines, developing production-grade ML systems, and building advanced Agentic AI and RAG architectures using LangChain and LangGraph.",
-    "Adept at transforming business requirements into automated, data-powered solutions using Python, SQL, PySpark, Databricks, and cloud technologies across AWS, Azure, and GCP. Recognized for improving operational efficiency, driving measurable business impact, and leading cross-functional teams to accelerate AI adoption."
+    "Data Scientist with 4 years of experience building AI/ML solutions, ETL pipelines and Generative AI systems. Skilled in LLM fine-tuning, RAG, Agentic AI, Prompt Engineering, data visualization, and cloud-based workflows.",
+    "Proven ability to improve efficiency and accuracy in large scale data processes by designing production-grade ML systems and automated pipelines."
   ],
   "stats": {
-    "years_experience": 6,
-    "prediction_improvement_pct": 18,
-    "processing_time_reduction_pct": 83
+    "years_experience": 4
   },
   "contact": {
-    "email": "amitha8841@gmail.com",
-    "phone": "(469) 581-9587",
-    "location": "Dallas, TX",
+    "email": "amithaake29@gmail.com",
+    "phone": "+1 (469) 318-8841",
+    "location": "Irving, TX",
+    "github": "https://github.com/AAmitha",
     "kaggle": "https://www.kaggle.com/akepati",
+    "leetcode": "https://leetcode.com/u/aa29/",
     "hackerrank": "https://www.hackerrank.com/profile/amithaake29",
-    "leetcode": "https://leetcode.com/u/aa29/"
+    "linkedin": "https://www.linkedin.com/in/amithaake03/",
+    "website": "index.html"
   },
   "experience": [
     {
-      "role": "Senior Data Scientist",
-      "company": "Americold Logistics, Dallas, TX",
+      "role": "Data Scientist",
+      "company": "SMD Technosol (Client: Thermo Fisher Scientific), Dallas, TX",
       "date": "Aug 2024 - Present",
       "details": [
-        "Designed and deployed ML models for demand forecasting, inventory optimization, and cold-storage anomaly detection, improving prediction accuracy by 18% and reducing spoilage events.",
-        "Built scalable RAG pipelines using enterprise documents, embedding models, and vector databases to support operational decision-making.",
-        "Developed GenAI solutions using LangChain, Azure OpenAI, and LangGraph, including summarization, agent workflows, and warehouse Q&A systems.",
-        "Engineered automated ETL frameworks in Databricks + PySpark, reducing data processing times from 4 hours to under 40 minutes.",
-        "Created real-time Power BI dashboards for inventory KPIs, warehouse performance, SLA adherence, and temperature variance alerts.",
-        "Implemented feature stores and model registries using MLflow, improving consistency and auditability of production model updates.",
-        "Built and containerized APIs for ML serving using FastAPI, Docker, and Kubernetes, ensuring low-latency inference.",
-        "Implemented data quality validation using Great Expectations, ensuring 98% accuracy and preventing downstream model failures."
+        "Developed Python-based ingestion pipelines and automated Databricks ETL workflows, reducing manual intervention and improving processing efficiency by 40%.",
+        "Designed and deployed ML forecasting models achieving 96% accuracy, optimizing experimental planning and resource allocation.",
+        "Built autonomous AI agents and LLM-powered assistants using LangChain and Azure OpenAI, reducing manual workload by 30%.",
+        "Implemented AI-driven anomaly detection and synthetic data generation pipelines, improving data quality by 33%."
       ],
-      "tech": ["Python","Databricks","PySpark","LangChain","LangGraph","Azure","Power BI","MLflow","FastAPI","Docker","Kubernetes"]
+      "tech": ["Python","Databricks","PySpark","LLMs","LangChain","Azure OpenAI"]
     },
     {
-      "role": "Data Analyst",
+      "role": "Data Research Intern",
       "company": "Tomorrow's Leaders Today, Frisco, TX",
       "date": "Jan 2024 - May 2024",
       "details": [
-        "Delivered advanced analytical insights for healthcare operations, improving reporting turnaround and insight clarity by 30%.",
-        "Created interactive Power BI dashboards integrating clinical workflows, appointment data, and compliance metrics.",
-        "Built secure SQL ETL pipelines to consolidate EHR, scheduling, billing, and claims data into unified analytical datasets.",
-        "Automated reporting workflows using Python + Power Automate, reducing manual effort by 40%.",
-        "Ensured strict HIPAA compliance in all analytics workflows by securing PHI data and access controls."
+        "Applied 10,000+ grant records and deployed ML models to predict high potential opportunities, increasing targeting accuracy by 40%.",
+        "Built NLP and LLM-based summarization pipelines, reducing manual effort by 45%.",
+        "Created interactive dashboards in Power BI and Tableau, improving reporting efficiency by 32%."
       ],
-      "tech": ["Python","SQL","Power BI","DAX","ETL"]
+      "tech": ["Python","NLP","Power BI","Tableau"]
+    },
+    {
+      "role": "Research Assistant",
+      "company": "University of Texas at Arlington, Arlington, TX",
+      "date": "Oct 2023 - May 2024",
+      "details": [
+        "Developed CNN and LSTM models and GAN-generated synthetic datasets for crop yield prediction, improving model performance by 25% and achieving >85% accuracy.",
+        "Integrated sensor, soil, and weather data into multimodal AI pipelines to enable crop optimization recommendations using Generative AI.",
+        "Conducted statistical analysis, feature engineering, and documentation to support research publications and deployment."
+      ],
+      "tech": ["CNN","LSTM","GANs","Multimodal AI"]
     },
     {
       "role": "Software Engineer",
       "company": "DXC Technology, Bangalore, IN",
-      "date": "Jul 2019 - Dec 2022",
+      "date": "Jun 2021 - Aug 2022",
       "details": [
-        "Developed ML models for customer churn prediction, fraud detection, and segmentation using Python and Scikit-learn.",
-        "Built enterprise-scale ETL pipelines using PySpark, Hive, and Hadoop, supporting high-volume data processing.",
-        "Designed Tableau and Power BI dashboards tracking customer KPIs, operational metrics, and risk indicators.",
-        "Monitored model performance using MLflow and built drift detection mechanisms to maintain model stability.",
-        "Wrote optimized SQL queries across Teradata, Oracle, and SQL Server, improving analytics execution time by 60%."
+        "Developed automation scripts and Python validation workflows to monitor and optimize secure file transfers, improving data accuracy and reducing incident response time.",
+        "Migrated legacy workflows to scalable ETL frameworks and built SQL and Power BI dashboards, increasing processing efficiency by 25%.",
+        "Implemented change management processes in Jira and automated alerts with AWS, reducing deployment errors and improving workflow reliability."
       ],
-      "tech": ["Python","PySpark","Hive","Tableau","Power BI","MLflow","SQL"]
+      "tech": ["Python","SQL","PySpark","Power BI"]
     }
-    {
+  ],
       "role": "Software Developer",
       "company": "DXC Technology",
       "date": "June 2021 - August 2022",
@@ -121,5 +124,34 @@
       "description": "Achieved 3rd rank out of 170 participants for innovative problem-solving."
     }
   ],
-  "projects": []
+  "projects": [
+    {
+      "name": "AI Log Error Explainer Agent",
+      "description": "An AI agent that reads system logs and identifies errors automatically using LLMs and prompt engineering to aid debugging.",
+      "html_url": "https://github.com/AAmitha/AI-Log-Error-Explainer-Agent",
+      "language": "Python",
+      "topics": ["AI","NLP","Log Analysis"]
+    },
+    {
+      "name": "Patient Readmission Predictor with AI Appeal Letter",
+      "description": "Predicts patient readmission risk and generates AI-powered appeal letters to improve healthcare interventions.",
+      "html_url": "https://github.com/AAmitha/Patient-Readmission-Predictor-with-AI-Appeal-Letter",
+      "language": "Python",
+      "topics": ["Healthcare","Machine Learning"]
+    },
+    {
+      "name": "Service Outage RCA Assistant",
+      "description": "AI assistant that analyzes logs and detects anomalies to generate root cause analysis for service outages.",
+      "html_url": "https://github.com/AAmitha/Service-Outage-RCA-Assistant",
+      "language": "Python",
+      "topics": ["AI","RCA","Automation"]
+    },
+    {
+      "name": "Intelligent Business Analytics Agent (Kaggle Capstone)",
+      "description": "Multi-agent AI system to automate business analytics workflows: data processing, trend detection, visualization and reporting.",
+      "html_url": "https://github.com/AAmitha/Intelligent-Business-Analytics-Agent",
+      "language": "Python",
+      "topics": ["Agents","Analytics","Kaggle"]
+    }
+  ]
 }

@@ -743,6 +743,8 @@ function renderContact(data) {
     `;
     contactInfo.appendChild(loc);
     // Optional profile links
+    if (data.contact.github) contactInfo.appendChild(createContactItem('GitHub', data.contact.github, data.contact.github, 'G'));
+    if (data.contact.linkedin) contactInfo.appendChild(createContactItem('LinkedIn', data.contact.linkedin, data.contact.linkedin, 'in'));
     if (data.contact.kaggle) contactInfo.appendChild(createContactItem('Kaggle', data.contact.kaggle, data.contact.kaggle, 'K'));
     if (data.contact.hackerrank) contactInfo.appendChild(createContactItem('HackerRank', data.contact.hackerrank, data.contact.hackerrank, 'H'));
     if (data.contact.leetcode) contactInfo.appendChild(createContactItem('LeetCode', data.contact.leetcode, data.contact.leetcode, 'L'));
