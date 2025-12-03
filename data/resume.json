@@ -122,7 +122,7 @@
       "name": "Patient Readmission Predictor with AI Appeal Letter",
       "description": "Predicts patient readmission risk and generates AI-powered appeal letters to improve healthcare interventions.",
       "html_url": "https://github.com/AAmitha/Patient-Readmission-Predictor-with-AI-Appeal-Letter",
-      "language": "Python",
+      "language": "Jupyter Notebook",
       "topics": ["Healthcare","Machine Learning"]
     },
     {
@@ -133,11 +133,81 @@
       "topics": ["AI","RCA","Automation"]
     },
     {
-      "name": "Intelligent Business Analytics Agent (Kaggle Capstone)",
+      "name": "Kaggle Capstone: Intelligent Business Analytics Agent",
       "description": "Multi-agent AI system to automate business analytics workflows: data processing, trend detection, visualization and reporting.",
-      "html_url": "https://github.com/AAmitha/Intelligent-Business-Analytics-Agent",
+      "html_url": "https://github.com/AAmitha/Kaggle_Capstone_Intelligent_Business_Analytics_Agent",
       "language": "Python",
       "topics": ["Agents","Analytics","Kaggle"]
+    },
+    {
+      "name": "Automated Wafer Defect Classification Tool",
+      "description": "Prototype for wafer defect classification using computer vision and ML techniques.",
+      "html_url": "https://github.com/AAmitha/automated-wafer-defect-classification-tool",
+      "language": "JavaScript",
+      "topics": ["Computer Vision","Prototype"]
+    },
+    {
+      "name": "USA Accidents (EDA)",
+      "description": "Exploratory Data Analysis of US Accidents dataset highlighting trends, hotspots, and temporal patterns.",
+      "html_url": "https://github.com/AAmitha/USA-Accidents",
+      "language": "Jupyter Notebook",
+      "topics": ["EDA","Data Visualization"]
+    },
+    {
+      "name": "RiskLens: AI-Powered Credit Risk Scoring",
+      "description": "Credit risk prediction project using ML models on lending data.",
+      "html_url": "https://github.com/AAmitha/RiskLens-AI-Powered-Credit-Risk-Scoring",
+      "language": "Jupyter Notebook",
+      "topics": ["Finance","Machine Learning"]
+    },
+    {
+      "name": "House Price Predictor",
+      "description": "House price prediction models with feature engineering and evaluation.",
+      "html_url": "https://github.com/AAmitha/House_Price_Predictor",
+      "language": "Jupyter Notebook",
+      "topics": ["Regression","Feature Engineering"]
+    },
+    {
+      "name": "CareerForge",
+      "description": "Project repository for career-related tooling and ML workflows.",
+      "html_url": "https://github.com/AAmitha/careerforge",
+      "language": "Python",
+      "topics": ["Tools","ML"]
+    },
+    {
+      "name": "Railway Reservation System",
+      "description": "Python-based railway reservation system implementation.",
+      "html_url": "https://github.com/AAmitha/Railway_Reservation_System",
+      "language": "Python",
+      "topics": ["Web","Systems"]
+    },
+    {
+      "name": "Traffic Sign Classification",
+      "description": "Traffic sign classification models and examples (vision tasks).",
+      "html_url": "https://github.com/AAmitha/Traffic_Sign_Classification",
+      "language": "Jupyter Notebook",
+      "topics": ["Computer Vision","Classification"]
+    },
+    {
+      "name": "AI Red Blue Nim",
+      "description": "AI agent implementations for the Red-Blue Nim game.",
+      "html_url": "https://github.com/AAmitha/AI_Red_Blue_Nim",
+      "language": "Python",
+      "topics": ["AI","Games"]
+    },
+    {
+      "name": "AI Expense 8-Puzzle",
+      "description": "AI algorithms applied to 8-puzzle and expense-related examples.",
+      "html_url": "https://github.com/AAmitha/AI_Expense_8_Puzzle",
+      "language": "Python",
+      "topics": ["AI","Search"]
+    },
+    {
+      "name": "GO Fish Card Game",
+      "description": "Python implementation of the GO Fish card game with AI players.",
+      "html_url": "https://github.com/AAmitha/GO_Fish_Card_Game",
+      "language": "Python",
+      "topics": ["Games","Simulation"]
     }
   ]
 }
