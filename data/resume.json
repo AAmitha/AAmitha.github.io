@@ -22,8 +22,8 @@
   "experience": [
     {
       "role": "Data Scientist",
-      "company": "Thermo Fisher Scientific, Dallas, TX",
-      "date": "Dec 2024 - Present",
+      "company": "SMD Technosol (Client: Thermo Fisher Scientific), Dallas, TX",
+      "date": "Aug 2024 - Present",
       "details": [
         "Developed Python-based ingestion pipelines and automated Databricks ETL workflows, reducing manual intervention and improving processing efficiency by 40%.",
         "Designed and deployed ML forecasting models achieving 96% accuracy, optimizing experimental planning and resource allocation.",
@@ -76,7 +76,7 @@
     {
       "degree": "Bachelor of Technology in Computer Science and Engineering",
       "school": "Annamacharya University",
-      "date": "Jun 2017 - Jul 2021",
+      "date": "Jun 2016 - Jul 2019",
       "coursework": ["Python","DBMS","Big Data","Cloud Computing","Machine Learning","Data Structures and Algorithms"]
     }
   ],
